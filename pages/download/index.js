@@ -1,13 +1,13 @@
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 
-export default function Home() {
+export default function DownloadIndex() {
     return (
-        <Layout>
+        <Layout page="download">
             <div>
                 <header className="bg-white shadow">
                     <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         <h1 className="text-3xl font-bold text-gray-900">
-                            Dashboard
+                            Download
                         </h1>
                     </div>
                 </header>

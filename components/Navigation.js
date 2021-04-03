@@ -23,12 +23,12 @@ export default function Navigation({page}) {
                                     className={`${page === "dashboard" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Dashboard</a></Link>
                                 <Link href="#"><a
                                     className={`${page === "team" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Team</a></Link>
-                                <Link href="#"><a
-                                    className={`${page === "projects" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Projects</a></Link>
-                                <Link href="#"><a
-                                    className={`${page === "calender" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Calendar</a></Link>
-                                <Link href="#"><a
-                                    className={`${page === "reports" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Reports</a></Link>
+                                <Link href="/download"><a
+                                    className={`${page === "download" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Download</a></Link>
+                                <Link href="/donate"><a
+                                    className={`${page === "donate" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Donate</a></Link>
+                                <Link href="/faq"><a
+                                    className={`${page === "faq" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>FAQ</a></Link>
                             </div>
                         </div>
                     </div>
@@ -126,12 +126,12 @@ export default function Navigation({page}) {
                         className={`${page === "dashboard" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Dashboard</a></Link>
                     <Link href="#"><a
                         className={`${page === "team" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Team</a></Link>
-                    <Link href="#"><a
-                        className={`${page === "projects" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Projects</a></Link>
-                    <Link href="#"><a
-                        className={`${page === "calendar" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Calendar</a></Link>
-                    <Link href="#"><a
-                        className={`${page === "reports" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Reports</a></Link>
+                    <Link href="/download"><a
+                        className={`${page === "download" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Download</a></Link>
+                    <Link href="/donate"><a
+                        className={`${page === "donate" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Donate</a></Link>
+                    <Link href="/faq"><a
+                        className={`${page === "faq" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>FAQ</a></Link>
                 </div>
 
                 {/* Not LoggedIn */}
