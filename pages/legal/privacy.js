@@ -1,13 +1,13 @@
-import Layout from '../components/Layout'
+import Layout from '../../components/Layout'
 
-export default function Home() {
+export default function PrivacyPolicy() {
     return (
-        <Layout page="dashboard">
+        <Layout>
             <div>
                 <header className="bg-white shadow">
                     <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         <h1 className="text-3xl font-bold text-gray-900">
-                            Dashboard
+                            Privacy Policy
                         </h1>
                     </div>
                 </header>

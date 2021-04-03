@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 
-export default function Navigation() {
+export default function Navigation({page}) {
     const [isOpenProfile, setIsOpenProfile] = useState(false)
     const [isOpenNav, setIsOpenNav] = useState(false)
 
@@ -19,25 +19,19 @@ export default function Navigation() {
                         </div>
                         <div className="hidden md:block">
                             <div className="ml-10 flex items-baseline space-x-4">
-                                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                                 <Link href="#"><a
-                                    className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a></Link>
-
+                                    className={`${page === "dashboard" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Dashboard</a></Link>
                                 <Link href="#"><a
-                                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a></Link>
-
+                                    className={`${page === "team" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Team</a></Link>
                                 <Link href="#"><a
-                                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a></Link>
-
+                                    className={`${page === "projects" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Projects</a></Link>
                                 <Link href="#"><a
-                                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a></Link>
-
+                                    className={`${page === "calender" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Calendar</a></Link>
                                 <Link href="#"><a
-                                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a></Link>
+                                    className={`${page === "reports" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} px-3 py-2 rounded-md text-sm font-medium`}>Reports</a></Link>
                             </div>
                         </div>
                     </div>
-
                     <div className="hidden md:block">
                         {/* Not LoggedIn */}
                         <div className="ml-4 flex items-center md:ml-6">
@@ -82,7 +76,7 @@ export default function Navigation() {
                                     leaveTo="transform opacity-0 scale-95"
                                 >
                                     {(ref) => (
-                                        <div ref={ref}  className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                        <div ref={ref} className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                                              role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
                                             <Link href="#"><a className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                                role="menuitem">Your Profile</a></Link>
@@ -128,21 +122,16 @@ export default function Navigation() {
             {/* Mobile menu, show/hide based on menu state */}
             <div className={`${isOpenNav ? '' : 'hidden'} md:hidden`} id="mobile-menu">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <Link href="#"><a
-                       className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a></Link>
-
+                        className={`${page === "dashboard" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Dashboard</a></Link>
                     <Link href="#"><a
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a></Link>
-
+                        className={`${page === "team" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Team</a></Link>
                     <Link href="#"><a
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a></Link>
-
+                        className={`${page === "projects" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Projects</a></Link>
                     <Link href="#"><a
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a></Link>
-
+                        className={`${page === "calendar" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Calendar</a></Link>
                     <Link href="#"><a
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a></Link>
+                        className={`${page === "reports" ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}>Reports</a></Link>
                 </div>
 
                 {/* Not LoggedIn */}
