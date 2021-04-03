@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
     return (
         <footer className="bg-gray-800">
@@ -5,9 +7,9 @@ export default function Footer() {
                 <span className="text-center text-gray-300">Copyright &copy; {new Date().getFullYear()} <a href="https://gmcbm.net">GMCBM.net</a></span>
             </div>
             <div className="h-12 flex justify-center space-x-16">
-                <span className="text-center text-gray-300"><a href="https://gmcbm.net">Imprint</a></span>
-                <span className="text-center text-gray-300"><a href="https://gmcbm.net">Privacy Police </a></span>
-                <span className="text-center text-gray-300"><a href="https://gmcbm.net">Terms of Service</a></span>
+                <span className="text-center text-gray-300"><Link href="/imprint">Imprint</Link></span>
+                <span className="text-center text-gray-300"><Link href="/privacy">Privacy Police </Link></span>
+                <span className="text-center text-gray-300"><Link href="/tos">Terms of Service</Link></span>
             </div>
         </footer>
     )
