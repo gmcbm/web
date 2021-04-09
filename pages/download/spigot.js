@@ -1,6 +1,5 @@
 import Layout from '../../components/Layout'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { ChevronRightIcon } from "@heroicons/react/outline";
 
 export default function DownloadSpigot() {
     return (
@@ -9,7 +8,7 @@ export default function DownloadSpigot() {
                 <header className="bg-white shadow">
                     <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         <h1 className="text-3xl font-bold text-gray-900">
-                            Download <FontAwesomeIcon icon={faChevronRight} size="xs" /> Spigot
+                            Download <ChevronRightIcon className="h-5 w-5 inline-flex"/> Spigot
                         </h1>
                     </div>
                 </header>
